@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currency Converter</title>
+  <link rel="icon" href="img/currency-converter.png">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="converter-card">
+    <h2 class="title">Currency Converter</h2>
+
+    <div class="input-section">
+      <label class="label" for="fromAmount">From</label>
+      <div class="currency-box">
+        <div class="input-row">
+          <div class="currency-select">
+            <img id="fromFlag" src="https://flagcdn.com/w40/us.png" alt="USD flag" />
+            <select id="fromCurrency">
+              <option value="USD" selected>USD</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+              <option value="KGS">KGS</option>
+              <option value="KZT">KZT</option>
+              <option value="UZS">UZS</option>
+              <option value="RUB">RUB</option>
+              <option value="AED">AED</option>
+            </select>
+          </div>
+          <input type="number" id="fromAmount" placeholder="0" min="0" step="any"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="swap-icon" id="swapBtn" role="button" tabindex="0">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M7 16V4M7 4L3 8M7 4L11 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17 8V20M17 20L21 16M17 20L13 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="input-section">
+      <label class="label" for="toAmount">To</label>
+      <div class="currency-box">
+        <div class="input-row">
+          <div class="currency-select">
+            <img id="toFlag" src="https://flagcdn.com/w40/kg.png" alt="KGS flag" />
+            <select id="toCurrency">
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+              <option value="KGS" selected>KGS</option>
+              <option value="KZT">KZT</option>
+              <option value="UZS">UZS</option>
+              <option value="RUB">RUB</option>
+              <option value="AED">AED</option>
+            </select>
+          </div>
+          <input type="text" id="toAmount" readonly placeholder="0"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="exchange-rate-box">
+      <p class="rate-label">EXCHANGE RATE</p>
+      <p class="exchange-rate" id="exchangeRate">Loading...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
